@@ -57,7 +57,11 @@ Think of a database as a highly organised digital filing cabinet:
 In class we use two tools. Install both before the session.
 
 ### DuckDB
-[DuckDB](https://duckdb.org/) is the database engine we'll use — it runs entirely on your laptop with no server required, making it ideal for data science work.
+
+**Notice: No Installation is Required for DuckDB**
+
+[DuckDB](https://duckdb.org/) is the database engine we'll use — it runs entirely on your laptop with no server required, making it ideal for data science work. 
+
 
 <details>
 <summary>📖 Why DuckDB? (expand for details)</summary>
