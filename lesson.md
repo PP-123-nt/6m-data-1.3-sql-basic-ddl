@@ -241,6 +241,22 @@ CREATE TABLE lesson.students (
 );
 ```
 
+👉👉 **Drop the wrongly created students table, then recreate it:**
+
+```sql
+DROP TABLE lesson.students;   -- remove the previous students table created wrongly
+
+CREATE TABLE lesson.students (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR NOT NULL,
+  address VARCHAR,
+  phone VARCHAR,
+  email VARCHAR CHECK(CONTAINS(email, '@')),
+  class_id INTEGER REFERENCES lesson.classes(id)
+);
+```
+
+
 </details>
 
 ### 💬 Reflection
