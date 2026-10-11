@@ -285,6 +285,7 @@ UPDATE lesson.students
 SET email = 'linda.g@example.com'
 WHERE id = 4;
 ```
+Only DB data is updated, csv data still hold the old email.
 
 **4. Exporting Data:**
 
