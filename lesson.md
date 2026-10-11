@@ -294,12 +294,14 @@ Export with a `|` delimiter:
 ```sql
 COPY (SELECT * FROM lesson.students) TO '<full directory path>' WITH (HEADER 1, DELIMITER '|');
 ```
+**COPY (SELECT * FROM lesson.students) TO 'C:/Users/Yvonne/OneDrive/Desktop/NTU DSAI/Module 1/M1.3 Data/students_export.csv' WITH (HEADER 1, DELIMITER '|');**
 
 Export as JSON:
 
 ```sql
 COPY (SELECT * FROM lesson.students) TO '<full directory path>';
 ```
+**COPY (SELECT * FROM lesson.students) TO 'C:/Users/Yvonne/OneDrive/Desktop/NTU DSAI/Module 1/M1.3 Data/students_export.json' (FORMAT JSON);**
 
 **5. Challenge:** Repeat the export steps for the `teachers` and `classes` tables.
 
