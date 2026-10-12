@@ -290,7 +290,7 @@ A **table** is a physical copy of the data (materialized), while a **view** is a
 COPY lesson.teachers FROM '<full directory path>' (AUTO_DETECT TRUE);
 ```
 
-> **Note:** Use the full directory path to the CSV files, e.g. `/Users/yourname/Dev/6m-data-1.3-sql-basic-ddl/data/teachers.csv`
+> ⚠️⚠️**COPY lesson.teachers FROM '\\wsl.localhost\Ubuntu\home\yvonne\6m-data-1.3-sql-basic-ddl\data\teachers.csv' (AUTO_DETECT TRUE);**
 
 **2. Exercise:** Import data for the `classes` and `students` tables.
 
