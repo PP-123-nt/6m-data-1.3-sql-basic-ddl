@@ -289,8 +289,10 @@ A **table** is a physical copy of the data (materialized), while a **view** is a
 ```sql
 COPY lesson.teachers FROM '<full directory path>' (AUTO_DETECT TRUE);
 ```
-
-> ⚠️⚠️**COPY lesson.teachers FROM '\\wsl.localhost\Ubuntu\home\yvonne\6m-data-1.3-sql-basic-ddl\data\teachers.csv' (AUTO_DETECT TRUE);**
+⚠️⚠️
+```sql
+COPY lesson.teachers FROM '\\wsl.localhost\Ubuntu\home\yvonne\6m-data-1.3-sql-basic-ddl\data\teachers.csv' (AUTO_DETECT TRUE);
+```
 
 **2. Exercise:** Import data for the `classes` and `students` tables.
 
