@@ -25,6 +25,35 @@ Task:
 
 Write the SQL DDL statements to create these three tables in a new schema called library.
 
+```sql
+CREATE SCHEMA IF NOT EXISTS library;
+
+--Create Books Table
+CREATE TABLE library.books (
+  isbn VARCHAR(13) PRIMARY KEY,   -- primary key | a unique ISBN (13 characters)
+  title VARCHAR NOT NULL,                        
+  author VARCHAR NOT NULL,
+  published_year INTEGER 
+ );
+
+--Create Members Table
+CREATE TABLE library.members (
+  id INTEGER PRIMARY KEY,                                      -- primary key
+  name VARCHAR NOT NULL,                             
+  email VARCHAR CHECK(CONTAINS(email, '@')) UNIQUE NOT NULL,   -- check, unique, not null
+  join_date DATE NOT NULL,
+);
+
+--Create Loans Table
+CREATE TABLE library.loans (
+  id INTEGER PRIMARY KEY,                               -- primary key
+  loan_date DATE NOT NULL,                              
+  return_date DATE CHECK(return_date >= loan_date),     -- return date check >= loan date
+  book_isbn VARCHAR(13) REFERENCES library.books(isbn),
+  member_id INTEGER REFERENCES library.members(id)
+);
+```
+
 ## **Case Study 2: The "Marketing Dump" (Data Ingestion)**
 
 Scenario:
