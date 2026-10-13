@@ -118,7 +118,8 @@ If you want to create the database file from scratch:
   python db/create_duckdb.py
 ```
 
----
+<img width="854" height="407" alt="M1 3 Assignment - Advanced Part" src="https://github.com/user-attachments/assets/bc3643aa-2245-4cd6-8fff-8c05914ac3cd" />
+
 
 ---
 
