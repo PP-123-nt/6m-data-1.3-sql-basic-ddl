@@ -1,4 +1,4 @@
-id,name,address,phone,email,class_id
+id,name,address,phone,email,classes_id
 1,Michael Brown,654 Birch Blvd,555-8765,michael.brown@example.com,102
 2,Susan Lee,987 Maple Dr,555-2468,susan.lee@example.com,101
 3,David Wang,753 Cedar Ave,555-1357,david.wang@example.com,103
