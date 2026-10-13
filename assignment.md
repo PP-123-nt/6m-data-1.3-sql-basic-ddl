@@ -77,6 +77,27 @@ id,full_name,contact_info,signup_date
 2. **Import Data:** Write the COPY command to load the CSV data into your table.  
 3. **Create a View:** Create a view called valid\_leads that filters out rows where the contact\_info does NOT contain an '@' symbol (excluding phone numbers).
 
+```sql
+CREATE SCHEMA IF NOT EXISTS Marketing;
+
+--Create Marking Leads Table
+CREATE TABLE marketing.leads (
+  id VARCHAR PRIMARY KEY,  
+  full_name VARCHAR NOT NULL,                        
+  contact_info VARCHAR UNIQUE NOT NULL, 
+  signup_date DATE NOT NULL,
+ );
+
+COPY marketing.leads FROM '\\wsl.localhost\Ubuntu\home\yvonne\6m-data-1.3-sql-basic-ddl\data\leads_raw.csv' (AUTO_DETECT TRUE);
+
+-- Create View
+CREATE VIEW marketing.valid_leads AS
+SELECT id, full_name, contact_info AS email, signup_date
+FROM marketing.leads
+WHERE contains(contact_info,'@');
+
+```
+
 ---
 
 ## **Advanced Parts for learner with Python knowledge(Optional)**
