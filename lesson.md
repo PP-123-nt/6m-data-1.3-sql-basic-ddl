@@ -289,7 +289,7 @@ A **table** is a physical copy of the data (materialized), while a **view** is a
 ```sql
 COPY lesson.teachers FROM '<full directory path>' (AUTO_DETECT TRUE);
 ```
-⚠️⚠️
+⚠️⚠️⚠️ **Full Path** ⚠️⚠️⚠️
 ```sql
 COPY lesson.teachers FROM '\\wsl.localhost\Ubuntu\home\yvonne\6m-data-1.3-sql-basic-ddl\data\teachers.csv' (AUTO_DETECT TRUE);
 ```
@@ -303,7 +303,7 @@ UPDATE lesson.students
 SET email = 'linda.g@example.com'
 WHERE id = 4;
 ```
-⚠️⚠️**Only DB data is updated, csv data still hold the old email.**
+⚠️⚠️⚠️ **Only DB data is updated, csv data still hold the old email.** ⚠️⚠️⚠️
 
 **4. Exporting Data:**
 
@@ -312,7 +312,7 @@ Export with a `|` delimiter:
 ```sql
 COPY (SELECT * FROM lesson.students) TO '<full directory path>' WITH (HEADER 1, DELIMITER '|');
 ```
-👉👉 
+⚠️⚠️⚠️ **Full Path** ⚠️⚠️⚠️ 
   ```sql
   COPY (SELECT * FROM lesson.students) TO 'C:/Users/Yvonne/OneDrive/Desktop/NTU DSAI/Module 1/M1.3 Data/students_export.csv' WITH (HEADER 1, DELIMITER '|');
  ```
@@ -322,7 +322,7 @@ Export as JSON:
 ```sql
 COPY (SELECT * FROM lesson.students) TO '<full directory path>';
 ```
-👉👉 
+⚠️⚠️⚠️ **Full Path** ⚠️⚠️⚠️ 
 ```sql
   COPY (SELECT * FROM lesson.students) TO 'C:/Users/Yvonne/OneDrive/Desktop/NTU DSAI/Module 1/M1.3 Data/students_export.json' (FORMAT JSON);
 ```
