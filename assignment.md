@@ -25,6 +25,7 @@ Task:
 
 Write the SQL DDL statements to create these three tables in a new schema called library.
 
+✅✅✅ **Answer**
 ```sql
 CREATE SCHEMA IF NOT EXISTS library;
 
@@ -77,6 +78,8 @@ id,full_name,contact_info,signup_date
 2. **Import Data:** Write the COPY command to load the CSV data into your table.  
 3. **Create a View:** Create a view called valid\_leads that filters out rows where the contact\_info does NOT contain an '@' symbol (excluding phone numbers).
 
+
+✅✅✅ **Answer**
 ```sql
 CREATE SCHEMA IF NOT EXISTS Marketing;
 
@@ -117,6 +120,8 @@ If you want to create the database file from scratch:
 ```
   python db/create_duckdb.py
 ```
+
+📝📝📝 **Notes** 📝📝📝 check on tables/views in db
 
 <img width="854" height="407" alt="M1 3 Assignment - Advanced Part" src="https://github.com/user-attachments/assets/bc3643aa-2245-4cd6-8fff-8c05914ac3cd" />
 
