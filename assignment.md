@@ -25,7 +25,7 @@ Task:
 
 Write the SQL DDL statements to create these three tables in a new schema called library.
 
-✅✅✅ **Answer**
+✅✅✅ **Answer** ✅✅✅
 ```sql
 CREATE SCHEMA IF NOT EXISTS library;
 
@@ -79,7 +79,7 @@ id,full_name,contact_info,signup_date
 3. **Create a View:** Create a view called valid\_leads that filters out rows where the contact\_info does NOT contain an '@' symbol (excluding phone numbers).
 
 
-✅✅✅ **Answer**
+✅✅✅ **Answer** ✅✅✅
 ```sql
 CREATE SCHEMA IF NOT EXISTS Marketing;
 
